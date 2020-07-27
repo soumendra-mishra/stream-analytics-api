@@ -1,8 +1,8 @@
 {
-  "name": "soumen-pubsub-api",
+  "name": "stream-analytics-api",
   "version": "1.0.0",
   "private": true,
-  "description": "Simple Pub/Sub subscriber service sample",
+  "description": "Stream Analytics API",
   "main": "index.js",
   "author": "Soumendra Mishra",
   "license": "Apache-2.0",

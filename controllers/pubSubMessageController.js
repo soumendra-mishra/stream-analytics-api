@@ -1,5 +1,3 @@
-'use strict';
-
 const axios = require("axios");
 const { Storage } = require('@google-cloud/storage');
 const storage = new Storage();
@@ -24,10 +22,8 @@ async function readStorageBucket(pubsubMsg) {
 
 async function insertRowsAsStream(messages) {
     var rowsList = [];
-
     try {
         var rows = messages.split("\n");
-
         for (var i = 0; i < rows.length; i++) {
             rowsList.push(JSON.parse(rows[i]));
         }
@@ -41,19 +37,6 @@ async function insertRowsAsStream(messages) {
 }
 
 exports.index = async function (req, res) {
-    if (!req.body) {
-        const msg = 'No Pub/Sub message received';
-        console.error(`error: ${msg}`);
-        res.status(400).send(`Bad Request: ${msg}`);
-        return;
-    }
-    if (!req.body.message) {
-        const msg = 'Invalid Pub/Sub message format';
-        console.error(`error: ${msg}`);
-        res.status(400).send(`Bad Request: ${msg}`);
-        return;
-    }
-
     const pubSubMessage = req.body.message;
 
     try {
