@@ -1,0 +1,26 @@
+{
+  "name": "soumen-pubsub-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple Pub/Sub subscriber service sample",
+  "main": "index.js",
+  "author": "Soumendra Mishra",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "fs": "^0.0.1-security",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "axios": "^0.19.0",
+    "@google-cloud/storage": "^4.7.0",
+    "@google-cloud/bigquery": "^4.7.0"
+  }
+}
